@@ -8,13 +8,37 @@
         <WeatherDescription :weather="weather" />
       </v-col>
       <v-col cols="12" md="4">
-        <WeatherWindSpeed :weather="weather" />
+        <WeatherDataCard>
+          <template #icon>
+            <v-icon size="18" class="mr-2">mdi-weather-windy</v-icon>
+            Wind speed:
+          </template>
+          <template #description>
+            {{ weather?.wind.speed }} m/s
+          </template>
+        </WeatherDataCard>
       </v-col>
       <v-col cols="12" md="4">
-        <WeatherHumidity :weather="weather" />
+        <WeatherDataCard>
+          <template #icon>
+            <v-icon size="18" class="mr-2">mdi-water-percent</v-icon>
+            Humidity:
+          </template>
+          <template #description>
+            {{ weather?.main.humidity }}%
+          </template>
+        </WeatherDataCard>
       </v-col>
       <v-col cols="12" md="4">
-        <WeatherPressure :weather="weather" />
+        <WeatherDataCard>
+          <template #icon>
+            <v-icon size="18" class="mr-2">mdi-gauge</v-icon>
+            Pressure:
+          </template>
+          <template #description>
+            {{ weather?.main.pressure }} hPa
+          </template>
+        </WeatherDataCard>
       </v-col>
       <v-col cols="12">
         <v-card>
@@ -28,13 +52,11 @@
 
 <script setup lang="ts">
 import { defineProps, defineEmits} from 'vue';
-import { WeatherData } from '@/pages/Weather/interfaces/WeatherData';
+import { WeatherData } from '@/interfaces/WeatherData';
 import WeatherMap from '@/components/WeatherMap.vue';
 import WeatherInfo from '@/components/WeatherInfo.vue';
-import WeatherWindSpeed from '@/components/WeatherWindSpeed.vue';
 import WeatherDescription from '@/components/WeatherDescription.vue';
-import WeatherHumidity from '@/components/WeatherHumidity.vue';
-import WeatherPressure from '@/components/WeatherPressure.vue';
+import WeatherDataCard from '@/components/WeatherDataCard.vue';
 
 defineProps<{
   weather: WeatherData | null;

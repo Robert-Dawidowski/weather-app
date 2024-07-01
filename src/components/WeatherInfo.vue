@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue';
-import { WeatherData } from '@/pages/Weather/interfaces/WeatherData';
+import { WeatherData } from '@/interfaces/WeatherData';
 
 defineProps<{
   weather: WeatherData | null;

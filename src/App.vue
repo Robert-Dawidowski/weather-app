@@ -7,5 +7,5 @@
 </template>
 
 <script setup lang="ts">
-import Weather from '@/pages/Weather/App.vue';
+import Weather from '@/components/Weather.vue';
 </script>

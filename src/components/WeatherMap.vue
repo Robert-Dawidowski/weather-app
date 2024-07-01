@@ -8,7 +8,7 @@
 import { ref, onMounted, defineProps, watch, onUnmounted, defineEmits } from 'vue';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { WeatherData } from '@/pages/Weather/interfaces/WeatherData';
+import { WeatherData } from '@/interfaces/WeatherData';
 
 const props = defineProps<{
   weather: WeatherData | null;

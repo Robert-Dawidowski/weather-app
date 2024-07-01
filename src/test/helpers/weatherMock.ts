@@ -1,4 +1,4 @@
-import { WeatherData } from '@/pages/Weather/interfaces/WeatherData';
+import { WeatherData } from '@/interfaces/WeatherData';
 
 export const weatherMock: WeatherData = {
   coord: { lon: 21.017532, lat: 52.237049 },
