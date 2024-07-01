@@ -4,6 +4,8 @@ Check weather in every city you want
 
 ## 💿 Install
 
+### You need to have Node version ^18.0.0 || >=20.0.0
+
 Set up your project using your preferred package manager. Use the corresponding command to install the dependencies:
 
 | Package Manager                                                | Command        |
