@@ -1,11 +1,11 @@
 <template>
   <v-app>
     <v-main>
-      <HelloWorld />
+      <Weather />
     </v-main>
   </v-app>
 </template>
 
 <script setup lang="ts">
-  //
+import Weather from '@/pages/Weather/App.vue';
 </script>

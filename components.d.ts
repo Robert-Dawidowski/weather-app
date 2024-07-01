@@ -8,5 +8,15 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    Map: typeof import('./src/components/Map.vue')['default']
+    WeatherDescription: typeof import('./src/components/WeatherDescription.vue')['default']
+    WeatherDisplay: typeof import('./src/components/WeatherDisplay.vue')['default']
+    WeatherForm: typeof import('./src/components/WeatherForm.vue')['default']
+    WeatherHumidity: typeof import('./src/components/WeatherHumidity.vue')['default']
+    WeatherInfo: typeof import('./src/components/WeatherInfo.vue')['default']
+    WeatherInfoList: typeof import('./src/components/WeatherInfoList.vue')['default']
+    WeatherMap: typeof import('./src/components/WeatherMap.vue')['default']
+    WeatherPressure: typeof import('./src/components/WeatherPressure.vue')['default']
+    WeatherWindSpeed: typeof import('./src/components/WeatherWindSpeed.vue')['default']
   }
 }

@@ -1,20 +1,17 @@
 // Plugins
-import Components from 'unplugin-vue-components/vite'
-import Vue from '@vitejs/plugin-vue'
-import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
-import ViteFonts from 'unplugin-fonts/vite'
-
-// Utilities
-import { defineConfig } from 'vite'
-import { fileURLToPath, URL } from 'node:url'
+import { defineConfig } from 'vite';
+import Components from 'unplugin-vue-components/vite';
+import Vue from '@vitejs/plugin-vue';
+import Vuetify, { VuetifyOptions } from 'vite-plugin-vuetify';
+import ViteFonts from 'unplugin-fonts/vite';
+import { fileURLToPath, URL } from 'node:url';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     Vue({
-      template: { transformAssetUrls },
+      template: { transformAssetUrls: true },
     }),
-    // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
     Vuetify(),
     Components(),
     ViteFonts({
@@ -26,7 +23,6 @@ export default defineConfig({
       },
     }),
   ],
-  define: { 'process.env': {} },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
@@ -53,4 +49,4 @@ export default defineConfig({
       },
     },
   },
-})
+});
