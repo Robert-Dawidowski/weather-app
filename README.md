@@ -50,7 +50,9 @@ Once the build process is completed, your application will be ready for deployme
 
 To see the weather in a given city, search for the name in the search engine.
 Once you find the city, information and a map will appear. The map is usable and after clicking on a point on it, e.g. the center of London,
-it will show us the weather in the city we clicked on
+it will show us the weather in the city we clicked on.
+
+Init city is based on your browser localization (if You allow to it) if no, default city is "Warsaw"
 
 ## 📑 License
 [MIT](http://opensource.org/licenses/MIT)
