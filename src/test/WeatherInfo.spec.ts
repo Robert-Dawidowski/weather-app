@@ -8,7 +8,6 @@ import * as directives from 'vuetify/directives';
 
 const vuetify = createVuetify({ components, directives });
 
-
 describe('WeatherInfo.vue', () => {
   it('renders correctly', () => {
     const wrapper = mount(WeatherInfo, {

@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Weather: typeof import('./src/components/Weather.vue')['default']
+    WeatherDashboard: typeof import('./src/components/WeatherDashboard.vue')['default']
     WeatherDataCard: typeof import('./src/components/WeatherDataCard.vue')['default']
     WeatherDescription: typeof import('./src/components/WeatherDescription.vue')['default']
     WeatherDisplay: typeof import('./src/components/WeatherDisplay.vue')['default']

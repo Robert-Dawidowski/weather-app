@@ -40,7 +40,6 @@ const handleSubmit = async () => {
     const { valid } = await form.value?.validate();
 
     if (valid) {
-      console.log('city name:', city.value)
       emit('submit', city.value);
       city.value = '';
       cityInput.value?.blur();

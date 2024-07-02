@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import WeatherDisplay from '@/components/WeatherDisplay.vue';
+import WeatherDashboard from '@/components/WeatherDashboard.vue';
 import { weatherMock } from './helpers/weatherMock';
 import { createVuetify } from 'vuetify';
 import * as components from 'vuetify/components';
@@ -8,9 +8,9 @@ import * as directives from 'vuetify/directives';
 
 const vuetify = createVuetify({ components, directives });
 
-describe('WeatherDisplay.vue', () => {
+describe('WeatherDashboard.vue', () => {
   it('renders correctly', async () => {
-    const wrapper = mount(WeatherDisplay, {
+    const wrapper = mount(WeatherDashboard, {
       props: { weather: weatherMock },
       global: {
         plugins: [vuetify],
@@ -23,7 +23,7 @@ describe('WeatherDisplay.vue', () => {
   });
 
   it('renders weather details', async () => {
-    const wrapper = mount(WeatherDisplay, {
+    const wrapper = mount(WeatherDashboard, {
       props: { weather: weatherMock },
       global: {
         plugins: [vuetify],
@@ -38,7 +38,7 @@ describe('WeatherDisplay.vue', () => {
   });
 
   it('renders WeatherDataCard with correct slot content', async () => {
-    const wrapper = mount(WeatherDisplay, {
+    const wrapper = mount(WeatherDashboard, {
       props: { weather: weatherMock },
       global: {
         plugins: [vuetify],
